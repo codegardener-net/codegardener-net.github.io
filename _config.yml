@@ -2,10 +2,10 @@
 title: Code Gardener
 # header-img: img/home-bg.jpg
 email: miguelerm@gmail.com
-#copyright_name: Your/Project/Corporate Name
+copyright_name: CodeGardener.Net
 description: "Un microblog para hablar de microservices"
 baseurl: ""
-url: "http://codegardener.net"
+url: "http://www.codegardener.net"
 author: "Miguel Román"
 twitter_username: miguelerm
 github_username:  miguelerm

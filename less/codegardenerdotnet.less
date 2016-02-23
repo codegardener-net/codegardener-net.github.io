@@ -87,6 +87,23 @@ hr.small {
 
 // Navigation
 
+.page-with-header {
+    .navbar-custom{
+        @media only screen and (min-width: 768px) {
+            .navbar-brand {
+                color: white;
+            }
+            .nav {
+                li {
+                    a {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }    
+}
+
 .navbar-custom {
 	background: white;
 	position: absolute;
@@ -187,18 +204,18 @@ hr.small {
 
 .intro-header {
 	background: no-repeat center center;
-	background-color: @gray;
+	background-color: @gray-dark;
 	background-attachment: scroll;
 	.background-cover;
 	// NOTE: Background images are set within the HTML using inline CSS!
-	margin-bottom: 50px;
+	margin-bottom: 0;
 	.site-heading,
 	.post-heading,
 	.page-heading {
-		padding: 100px 0 50px;
+		padding: 50px 0 20px;
 		color: white;
 		@media only screen and (min-width: 768px) {
-			padding: 150px 0;
+			padding: 50px 0;
 		}
 	}
 	.site-heading,
@@ -499,5 +516,22 @@ body {
 .article-content {
     background: white;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-    margin-top: 50px;
+    margin-top: -30px;
+    
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        padding-top: 1px;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        margin-top: 0;
+        padding-top: 1px;
+    }
+}
+
+body > footer {
+    background: @gray-dark;
+}
+
+#disqus_thread {
+    margin: 15px;
 }
