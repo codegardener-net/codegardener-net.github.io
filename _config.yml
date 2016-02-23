@@ -10,6 +10,7 @@ twitter_username: miguelerm
 github_username:  miguelerm
 facebook_username:  miguelerm
 email_username:  miguelerm@gmail.com
+excerpt_separator: <!--more-->
 
 # Build settings
 markdown: kramdown

@@ -1,20 +1,20 @@
 ---
 layout: page
-description: "A Clean Blog Theme by Start Bootstrap"
+description: "Microblog para hablar de microservices"
 ---
 
 {% for post in paginator.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">            {{ post.title }}
-        </h2>
+        <h2 class="post-title">{{ post.title }}</h2>
         {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
+        <h3 class="post-subtitle">{{ post.subtitle }}</h3>
         {% endif %}
     </a>
-    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
+    {% if post.excerpt %}
+    <p>{{ post.excerpt }}</p>
+    {% endif %}
+    <p class="post-meta">Por {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} el {{ post.date | date: "%-d" }} de {% include mes.html date=post.date %} de {{ post.date | date: "%Y" }}</p>
 </div>
 <hr>
 {% endfor %}
@@ -24,12 +24,12 @@ description: "A Clean Blog Theme by Start Bootstrap"
 <ul class="pager">
     {% if paginator.previous_page %}
     <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Entradas recientes</a>
     </li>
     {% endif %}
     {% if paginator.next_page %}
     <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Entradas antiguas &rarr;</a>
     </li>
     {% endif %}
 </ul>
