@@ -8,14 +8,14 @@ var rename = require('gulp-rename');
 
 var pkg = require('./package.json');
 
-gulp.task('uglify', ['clean'], function () {
+gulp.task('uglify', ['clean-js'], function () {
     return gulp.src('./js/' + pkg.name + '.js')
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('./js'))
 });
 
-gulp.task('less', ['clean'], function () {
+gulp.task('less', ['clean-css'], function () {
     return gulp.src('./less/' + pkg.name + '.less')
         .pipe(less())
         .pipe(gulp.dest('./css'));
@@ -28,14 +28,28 @@ gulp.task('mincss', ['less'], function () {
         .pipe(gulp.dest('./css'));
 });
 
-gulp.task('clean', function () {
+gulp.task('clean-css', function () {
     return del([
         './css/' + pkg.name + '.css',
-        './css/' + pkg.name + '.min.css',
+        './css/' + pkg.name + '.min.css'
+    ]);
+});
+
+gulp.task('clean-js', function () {
+    return del([
         './js/' + pkg.name + '.min.js'
     ]);
 });
 
 gulp.task('default', ['uglify', 'less', 'mincss'], function() {
   // place code for your default task here
+});
+
+gulp.task('watch', ['default'], function () {
+    watch('./less/*.less', function () {
+        gulp.start('mincss');
+    });
+    watch(['./js/*.js', '!./js/*.min.js'], function () {
+        gulp.start('uglify');
+    });
 });

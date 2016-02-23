@@ -2,7 +2,7 @@ body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 20px;
   color: #404040;
-  background: #f1f1f1;
+  background: #e8e8e8;
 }
 p {
   line-height: 1.5;
@@ -33,7 +33,10 @@ a img:focus {
 }
 blockquote {
   background: #eee;
-  border-left: 10px solid #ccc;
+  border-left: 5px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C" "\201D" "\2018" "\2019";
 }
 blockquote > p {
   margin: auto;
@@ -43,7 +46,18 @@ blockquote > footer {
 }
 blockquote.blockquote-reverse {
   border-left: none;
-  border-right: 10px solid #ccc;
+  border-right: 5px solid #ccc;
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
 }
 hr.small {
   max-width: 100px;
@@ -75,12 +89,11 @@ hr.small {
     border-bottom: 1px solid transparent;
   }
   .navbar-custom .navbar-brand {
-    color: white;
     padding: 20px;
-  }
-  .navbar-custom .navbar-brand:hover,
-  .navbar-custom .navbar-brand:focus {
-    color: rgba(255, 255, 255, 0.8);
+    /*&:hover,
+			&:focus {
+				color: @white-faded;
+			}*/
   }
   .navbar-custom .nav li a {
     color: #404040;
@@ -411,6 +424,6 @@ body {
 }
 .article-content {
   background: white;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   margin-top: 50px;
 }

@@ -7,7 +7,7 @@ body {
 	.serif;
 	font-size: 20px;
 	color: @gray-dark;
-    background: #f1f1f1;
+    background: #e8e8e8;
 }
 
 // -- Typography
@@ -47,8 +47,11 @@ a img {
 
 blockquote {
 	background: #eee;
-    border-left: 10px solid #ccc;
-     
+    border-left: 5px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+  
     > p {
         margin: auto;
     }
@@ -59,7 +62,19 @@ blockquote {
     
     &.blockquote-reverse {
         border-left: none;
-        border-right: 10px solid #ccc;
+        border-right: 5px solid #ccc;
+    }
+    
+    &:before {
+        color: #ccc;
+        content: open-quote;
+        font-size: 4em;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.4em;
+    }
+    & p {
+        display: inline;
     }
 }
 
@@ -97,12 +112,12 @@ hr.small {
 		background: transparent;
 		border-bottom: 1px solid transparent;
 		.navbar-brand {
-			color: white;
+			//color: white;
 			padding: 20px;
-			&:hover,
+			/*&:hover,
 			&:focus {
 				color: @white-faded;
-			}
+			}*/
 		}
 		.nav {
 			li {
@@ -483,6 +498,6 @@ body {
 
 .article-content {
     background: white;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
     margin-top: 50px;
 }
