@@ -2,6 +2,7 @@ body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 20px;
   color: #404040;
+  background: #f1f1f1;
 }
 p {
   line-height: 1.5;
@@ -31,8 +32,18 @@ a img:focus {
   cursor: zoom-in;
 }
 blockquote {
-  color: #808080;
-  font-style: italic;
+  background: #eee;
+  border-left: 10px solid #ccc;
+}
+blockquote > p {
+  margin: auto;
+}
+blockquote > footer {
+  padding: 0;
+}
+blockquote.blockquote-reverse {
+  border-left: none;
+  border-right: 10px solid #ccc;
 }
 hr.small {
   max-width: 100px;
@@ -238,6 +249,9 @@ hr.small {
   color: #0085A1;
   text-decoration: underline;
 }
+.post-preview > a.more-link {
+  border-bottom: 1px solid #808080;
+}
 @media only screen and (min-width: 768px) {
   .post-preview > a > .post-title {
     font-size: 36px;
@@ -394,4 +408,9 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #0085A1;
+}
+.article-content {
+  background: white;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  margin-top: 50px;
 }

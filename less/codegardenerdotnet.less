@@ -7,6 +7,7 @@ body {
 	.serif;
 	font-size: 20px;
 	color: @gray-dark;
+    background: #f1f1f1;
 }
 
 // -- Typography
@@ -45,8 +46,21 @@ a img {
 }
 
 blockquote {
-	color: @gray;
-	font-style: italic;
+	background: #eee;
+    border-left: 10px solid #ccc;
+     
+    > p {
+        margin: auto;
+    }
+    
+    > footer {
+        padding: 0;
+    }
+    
+    &.blockquote-reverse {
+        border-left: none;
+        border-right: 10px solid #ccc;
+    }
 }
 
 hr.small {
@@ -264,6 +278,11 @@ hr.small {
 			}
 		}
 	}
+    
+    > a.more-link {
+        border-bottom: 1px solid @gray;
+    }
+    
 	@media only screen and (min-width: 768px) {
 		> a {
 			> .post-title {
@@ -460,4 +479,10 @@ img::-moz-selection {
 
 body {
 	webkit-tap-highlight-color: @brand-primary;
+}
+
+.article-content {
+    background: white;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+    margin-top: 50px;
 }

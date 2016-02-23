@@ -5,15 +5,15 @@ layout: default
 <article>
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 article-content">
 
                 <h1>{{ page.title }}</h1>
                 {% if page.subtitle %}
                 <h2 class="subheading">{{ page.subtitle }}</h2>
                 {% endif %}
-                <span class="meta">Por {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} el {{ page.date | date: "%-d" }} de {% include mes.html date=page.date %} de {{ page.date | date: "%Y" }}</span>
+                <span class="meta">Por {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} el <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d" }} de {% include mes.html date=page.date %} de {{ page.date | date: "%Y" }}</time></span>
 
-				{{ content }}
+                {{ content }}
 
                 <hr>
 

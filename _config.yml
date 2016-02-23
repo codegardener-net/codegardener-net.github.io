@@ -6,6 +6,7 @@ email: miguelerm@gmail.com
 description: "Un microblog para hablar de microservices"
 baseurl: ""
 url: "http://codegardener.net"
+author: "Miguel Román"
 twitter_username: miguelerm
 github_username:  miguelerm
 facebook_username:  miguelerm

@@ -21,9 +21,10 @@ Los microservicios son aplicaciones "pequeñas". Aplicaciones que pueden ser de 
 
 Una definición más formal proveída por [Martin Fowler](http://www.martinfowler.com/) y [James Lewis](http://bovon.org/):
 
->En pocas palabras, el estilo de arquitectura de microservicios es un enfoque de desarrollar una sola aplicación como si fuese un conjunto de servicios pequeños, cada uno ejecutándose en su propio proceso y comunicándose por medio de un mecanismo liviano, comúnmente con una API de recursos HTTP. Estos servicios son construidos basados en unidades específicas del negocio y se despliegan independientemente por un proceso completamente automatizado. Hay muy poca administración centralizada de estos servicios, los cuales pueden escribirse en diferentes lenguajes de programación y utilizando diferentes tecnologías de almacenamiento de datos.
->
->--<cite>James Lewis</cite> y <cite>Martin Fowler</cite>
+<blockquote class="blockquote-reverse">
+<p>En pocas palabras, el estilo de arquitectura de microservicios es un enfoque de desarrollar una sola aplicación como si fuese un conjunto de servicios pequeños, cada uno ejecutándose en su propio proceso y comunicándose por medio de un mecanismo liviano, comúnmente con una API de recursos HTTP. Estos servicios son construidos basados en unidades específicas del negocio y se despliegan independientemente por un proceso completamente automatizado. Hay muy poca administración centralizada de estos servicios, los cuales pueden escribirse en diferentes lenguajes de programación y utilizando diferentes tecnologías de almacenamiento de datos.</p>
+<footer>James Lewis y Martin Fowler</footer>
+</blockquote>
 
 ## ¿Cómo se implementan los microservicios? ##
 

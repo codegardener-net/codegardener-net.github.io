@@ -15,6 +15,7 @@ description: "Microblog para hablar de microservices"
     <p>{{ post.excerpt }}</p>
     {% endif %}
     <p class="post-meta">Por {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} el {{ post.date | date: "%-d" }} de {% include mes.html date=post.date %} de {{ post.date | date: "%Y" }}</p>
+    <a href="{{ post.url | prepend: site.baseurl }}" class="more-link">Continúa leyendo <span class="sr-only">{{ post.title }}</span> <small class="glyphicon glyphicon-menu-right"></small></a>
 </div>
 <hr>
 {% endfor %}
