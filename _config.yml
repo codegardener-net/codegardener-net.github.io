@@ -1,0 +1,21 @@
+# Site settings
+title: Code Gardener
+# header-img: img/home-bg.jpg
+email: miguelerm@gmail.com
+#copyright_name: Your/Project/Corporate Name
+description: "Un microblog para hablar de microservices"
+baseurl: ""
+url: "http://codegardener.net"
+twitter_username: miguelerm
+github_username:  miguelerm
+facebook_username:  miguelerm
+email_username:  miguelerm@gmail.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]
