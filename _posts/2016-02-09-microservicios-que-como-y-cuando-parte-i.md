@@ -1,9 +1,10 @@
 ---
 layout:     post
-title:      "Microservicios ¿qué, cómo y cuándo? Parte I"
-# subtitle:   "Probando la plantilla de jekyll."
+title:      "Microservicios ¿qué, cómo y cuándo?"
+subtitle:   "Parte I"
 date:       2016-02-09 17:11:00
 author:     "Mike"
+tags:       microservicios, arquitectura
 # header-img: "img/post-bg-01.jpg"
 ---
 
