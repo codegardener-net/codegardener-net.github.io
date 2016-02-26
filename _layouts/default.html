@@ -5,14 +5,17 @@
 
 <body>
 
-    <div class="page-with-header">
-    {% include nav.html %}
-    </div>
+    <div class="container">
+    {% include nav.html %}                    
     
+    <div class="container-fluid">
     {{ content }}
     
-    {% include footer.html %}
 
+    {% include footer.html %}
+    </div>
+    </div>
+    
 </body>
 
 </html>
