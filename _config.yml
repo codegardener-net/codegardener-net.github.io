@@ -11,7 +11,10 @@ twitter_username: miguelerm
 github_username:  miguelerm
 facebook_username:  miguelerm
 email_username:  miguelerm@gmail.com
-excerpt_separator: <!--more-->
+excerpt_separator: <!-- more -->
+
+compress_html:
+  comments: ["<!-- ", " -->"]
 
 # Build settings
 markdown: kramdown
@@ -19,5 +22,5 @@ highlighter: rouge
 permalink: pretty
 paginate: 5
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-
+  
 gems: [jekyll-paginate, jekyll-feed]
