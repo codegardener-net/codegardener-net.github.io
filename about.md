@@ -1,8 +1,8 @@
 ---
 layout: page
-title: "Miguel Román"
+title: About
 description: "Software Developer"
-# header-img: "img/about-bg.jpg"
+slug: about
 ---
 
 Me dedico al desarrollo de software, mi mayor experiencia es con tecnologías Microsoft .NET pero tambien manejo [otros lenguajes][coderbits].

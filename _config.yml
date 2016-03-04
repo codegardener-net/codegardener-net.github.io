@@ -6,11 +6,18 @@ copyright_name: CodeGardener.Net
 description: "Un microblog para hablar de microservices"
 baseurl: ""
 url: "http://www.codegardener.net"
-author: "Miguel Román"
-twitter_username: miguelerm
-github_username:  miguelerm
-facebook_username:  miguelerm
-email_username:  miguelerm@gmail.com
+
+author:
+  name     : 'Miguel Román'
+  email    : miguelerm@gmail.com
+  url      : https://plus.google.com/+MiguelEduardoRomanMartinez/about
+  facebook : miguelerm
+  twitter  : miguelerm
+  github   : miguelerm
+
+disqus_shortname: "codegardener"
+google_analytics: UA-40921433-2
+
 excerpt_separator: <!-- more -->
 
 compress_html:
@@ -21,6 +28,6 @@ markdown: kramdown
 highlighter: rouge
 permalink: pretty
 paginate: 5
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+exclude: ["node_modules","Gruntfile.js","package.json","README.md"]
   
 gems: [jekyll-paginate, jekyll-feed]
