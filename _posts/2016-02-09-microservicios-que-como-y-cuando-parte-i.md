@@ -12,7 +12,7 @@ La "Arquitectura de microservicios" ha tomado popularidad en los últimos años,
 
 En esta primer entrada me gustaría comentar un poco de lo que es la *Microservices Architecture*, o mejor dicho de lo que yo considero que es. 
 
-<!--more-->
+<!-- more -->
 
 Para mayor detalle de los conceptos que aquí se mencionan recomiendo dar una ojeada a la [Microservices Resource Guide](http://martinfowler.com/microservices/) publicada en el sitio del maestro Martin Fowler.
 

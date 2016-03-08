@@ -1,38 +1,13 @@
 ---
-layout: page
-description: "Microblog para hablar de microservices"
+layout: default
+title: Home
+slug: home
 ---
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">{{ post.title }}</h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-        {% endif %}
-    </a>
-    {% if post.excerpt %}
-    <p>{{ post.excerpt }}</p>
-    {% endif %}
-    <p class="post-meta">Por {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} el {{ post.date | date: "%-d" }} de {% include mes.html date=post.date %} de {{ post.date | date: "%Y" }}</p>
-    <a href="{{ post.url | prepend: site.baseurl }}" class="more-link">Continúa leyendo <span class="sr-only">{{ post.title }}</span> <small class="glyphicon glyphicon-menu-right"></small></a>
-    <span data-disqus-identifier="{{ post.id }}" class="disqus-comment-count"></span>
-</div>
-<hr>
-{% endfor %}
+<div class="post-list">
+  {% for post in paginator.posts %}
+    {% include post.html %}
+  {% endfor %}
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Entradas recientes</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Entradas antiguas &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
+  {% include pagination.html %}
+</div>
