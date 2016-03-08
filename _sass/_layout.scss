@@ -45,8 +45,8 @@
   min-height: 60px;
   position: relative;
   @extend %clearfix;
-  padding: 60px 0;
-  margin-bottom: 30px;
+  padding: 30px 0;
+  margin-bottom: 10px;
 
   .overlay {
     background: rgba(#000, .75);
@@ -67,20 +67,20 @@
 
   .txt-center {
     color: $white-color;
-    margin-top: 160px;
+    margin-top: 50px;
     font-weight: 300;
   }
 }
 
 .home .header {
-  padding: 260px 0 200px;
+  padding: 100px 0 100px;
 }
 
 //
 // site title
 .title {
   font-size: 32px;
-  line-height: 65px;
+  line-height: 60px;
   letter-spacing: -1px;
   margin: 0;
   float: left;
